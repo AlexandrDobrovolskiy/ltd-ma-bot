@@ -23653,7 +23653,7 @@ module.exports = exports['default'];
 const moment = __webpack_require__(0);
 const fetch = __webpack_require__(139);
 
-exports.token = '411054335:AAHMRKSUpfO4OY_jBfJqpSjgI06TrIXer-g';
+exports.token = '405029325:AAHlmYyGG5PoQckS4cjXvxjZhfv6g039aGg';
 // exports.token = '402102841:AAGJHEFy9hjrEAqQzFgfQs6Mw-KZx6fCj48';
 
 
@@ -23724,6 +23724,7 @@ exports.calendarPerfom = [{
  }];
 
 exports.domain = 'http://ltd-bot.herokuapp.com';
+
 
 /***/ }),
 /* 156 */
@@ -32980,11 +32981,7 @@ function checkEncoding(name) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-// Some environments don't have global Buffer (e.g. React Native).
-// Solution would be installing npm modules "buffer" and "stream" explicitly.
-var Buffer = __webpack_require__(1).Buffer;
+/* WEBPACK VAR INJECTION */(function(Buffer, process) {
 
 var bomHandling = __webpack_require__(193),
     iconv = module.exports;
@@ -33125,11 +33122,8 @@ if (nodeVer) {
     __webpack_require__(209)(iconv);
 }
 
-if (false) {
-    console.error("iconv-lite warning: javascript files are loaded not with utf-8 encoding. See https://github.com/ashtuchkin/iconv-lite/wiki/Javascript-source-file-encodings for more info.");
-}
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1).Buffer, __webpack_require__(3)))
 
 /***/ }),
 /* 193 */
@@ -33224,8 +33218,7 @@ for (var i = 0; i < modules.length; i++) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-var Buffer = __webpack_require__(1).Buffer;
+/* WEBPACK VAR INJECTION */(function(Buffer) {
 
 // Export Node.js internal encodings.
 
@@ -33239,8 +33232,6 @@ module.exports = {
     utf16le: "ucs2",
 
     binary: { type: "_internal" },
-    iso88591: "binary",
-
     base64: { type: "_internal" },
     hex:    { type: "_internal" },
 
@@ -33261,7 +33252,7 @@ function InternalCodec(codecOptions, iconv) {
         this.encoder = InternalEncoderCesu8;
 
         // Add decoder for versions of Node not supporting CESU-8
-        if (new Buffer('eda0bdedb2a9', 'hex').toString() !== '💩') {
+        if (new Buffer("eda080", 'hex').toString().length == 3) {
             this.decoder = InternalDecoderCesu8;
             this.defaultCharUnicode = iconv.defaultCharUnicode;
         }
@@ -33415,14 +33406,14 @@ InternalDecoderCesu8.prototype.end = function() {
     return res;
 }
 
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1).Buffer))
 
 /***/ }),
 /* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-var Buffer = __webpack_require__(1).Buffer;
+/* WEBPACK VAR INJECTION */(function(Buffer) {
 
 // Note: UTF16-LE (or UCS2) codec is Node.js native. See encodings/internal.js
 
@@ -33599,14 +33590,14 @@ function detectEncoding(buf, defaultEncoding) {
 
 
 
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1).Buffer))
 
 /***/ }),
 /* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-var Buffer = __webpack_require__(1).Buffer;
+/* WEBPACK VAR INJECTION */(function(Buffer) {
 
 // UTF-7 codec, according to https://tools.ietf.org/html/rfc2152
 // See also below a UTF-7-IMAP codec, according to http://tools.ietf.org/html/rfc3501#section-5.1.3
@@ -33896,14 +33887,14 @@ Utf7IMAPDecoder.prototype.end = function() {
 
 
 
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1).Buffer))
 
 /***/ }),
 /* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-var Buffer = __webpack_require__(1).Buffer;
+/* WEBPACK VAR INJECTION */(function(Buffer) {
 
 // Single-byte codec. Needs a 'chars' string parameter that contains 256 or 128 chars that
 // correspond to encoded bytes (if 128 - then lower half is ASCII). 
@@ -33976,6 +33967,7 @@ SBCSDecoder.prototype.write = function(buf) {
 SBCSDecoder.prototype.end = function() {
 }
 
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1).Buffer))
 
 /***/ }),
 /* 199 */
@@ -34068,8 +34060,6 @@ module.exports = {
 
     "cp819": "iso88591",
     "ibm819": "iso88591",
-    "cp28591": "iso88591",
-    "28591": "iso88591",
 
     "cyrillic": "iso88595",
 
@@ -34200,6 +34190,7 @@ module.exports = {
   "1256": "windows1256",
   "1257": "windows1257",
   "1258": "windows1258",
+  "28591": "iso88591",
   "28592": "iso88592",
   "28593": "iso88593",
   "28594": "iso88594",
@@ -34274,6 +34265,11 @@ module.exports = {
   },
   "win1258": "windows1258",
   "cp1258": "windows1258",
+  "iso88591": {
+    "type": "_sbcs",
+    "chars": " ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ"
+  },
+  "cp28591": "iso88591",
   "iso88592": {
     "type": "_sbcs",
     "chars": " Ą˘Ł¤ĽŚ§¨ŠŞŤŹ­ŽŻ°ą˛ł´ľśˇ¸šşťź˝žżŔÁÂĂÄĹĆÇČÉĘËĚÍÎĎĐŃŇÓÔŐÖ×ŘŮÚŰÜÝŢßŕáâăäĺćçčéęëěíîďđńňóôőö÷řůúűüýţ˙"
@@ -34611,8 +34607,7 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-var Buffer = __webpack_require__(1).Buffer;
+/* WEBPACK VAR INJECTION */(function(Buffer) {
 
 // Multibyte codec. In this scheme, a character is represented by 1 or more bytes.
 // Our codec supports UTF-16 surrogates, extensions for GB18030 and unicode sequences.
@@ -35167,6 +35162,7 @@ function findIdx(table, val) {
 }
 
 
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1).Buffer))
 
 /***/ }),
 /* 202 */
@@ -35386,10 +35382,9 @@ module.exports = [["8740","䏰䰲䘃䖦䕸𧉧䵷䖳𧲱䳢𧳅㮕䜶䝄䱇䱀�
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(Buffer) {
 
-
-var Buffer = __webpack_require__(1).Buffer,
-    Transform = __webpack_require__(10).Transform;
+var Transform = __webpack_require__(10).Transform;
 
 
 // == Exports ==================================================================
@@ -35508,14 +35503,14 @@ IconvLiteDecoderStream.prototype.collect = function(cb) {
 }
 
 
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1).Buffer))
 
 /***/ }),
 /* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-var Buffer = __webpack_require__(1).Buffer;
+/* WEBPACK VAR INJECTION */(function(Buffer) {
 
 // == Extend Node primitives to use iconv-lite =================================
 
@@ -35730,6 +35725,7 @@ module.exports = function (iconv) {
     }
 }
 
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1).Buffer))
 
 /***/ }),
 /* 210 */
