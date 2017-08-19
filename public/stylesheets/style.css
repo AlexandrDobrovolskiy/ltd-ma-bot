@@ -1,0 +1,421 @@
+#header, #image, footer, #photos, #shortInfo, #video, #main, .headerFinal, #infoSubmited {
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+    margin: 5px;
+}
+
+@media (min-width: 700px){
+    a {
+        color: #00B7FF;
+    }
+    #header {
+        height: 15%;
+        color: darkmagenta;
+    }
+
+    body {
+        background: #F8F8F8;
+    }
+
+    #footer {
+        padding: 5px;
+    }
+
+    #image {
+        width: 39%;
+        height: 500px;
+        margin: 5px;
+    }
+
+    #mainInfo {
+        display: flex;
+        align-self: center;
+        width: 100%;
+        height: 50%;
+    }
+
+    #photos {
+        display: -webkit-flex;
+        align-self: center;
+        display: inline-flex;
+        width: 99%;
+        height: 410px;
+        margin: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .photo {
+        width: auto;
+        height: 390px;
+        margin: 3px;
+    }
+
+    #mainImage {
+        width: 100%;
+        height: 100%;
+    }
+    #mainContent {
+        margin: 5px;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    #mainInfo {
+        margin: 5px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #headerContent {
+        margin: 1% 1% 1% 10%;
+        padding: 5px;
+
+    }
+
+    #shortInfo {
+        overflow-y: auto ;
+        width: 65%;
+        height: 500px;
+    }
+
+    #main {
+        margin: auto;
+        height: 900px;
+        display: flex;
+        width: 50%;
+        border-radius: 30px;
+    }
+
+    .headerFinal {
+        width: 50%;
+        height: 10%;
+        margin: auto;
+        color: darkmagenta;
+        border-radius: 20px;
+    }
+
+    @keyframes loading {
+        0%{
+            border-radius: 10% 10% 10% 10%;
+            transform: rotate(0deg);
+        }
+
+        25%{
+            border-radius: 50% 10% 10% 10%;
+            transform: rotate(90deg);
+        }
+        50%{
+            border-radius: 50% 10% 50% 10%;
+            transform: rotate(180deg);
+        }
+        75%{
+            border-radius: 50% 50% 50% 10%;
+            transform: rotate(270deg);
+        }
+        100%{
+            border-radius: 50% 50% 50% 50%;
+            transform: rotate(360deg);
+        }
+    }
+
+    #loading {
+        margin: 24% auto;
+        width: 80px;
+        height: 80px;
+        background: darkmagenta;
+        animation: loading 3s ease-out 0s infinite;
+    }
+
+    #globalInput {
+        width: 95%;
+        height: 700px;
+
+    }
+
+    .inputs {
+        display: -webkit-flex;
+        display: flex;
+        width: 95%;
+        height: 40px;
+        padding: 3px;
+        margin: 15px;
+    }
+
+    .captions {
+        display: -webkit-flex;
+        display: flex;
+        width: 300px;
+        height: 40px;
+        margin: 5px;
+        padding: 3px;
+        color: #757575;
+    }
+
+    .label {
+        width: 300px;
+    }
+
+    input[type=text], input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        border-radius: 15px;
+    }
+    input[type=text]:focus, input[type=email]:focus {
+        border: 3px solid darkmagenta;
+    }
+
+    button[type="submit"] {
+
+        -moz-border-radius: 2px;
+        -moz-user-select: none;
+        background: #f2f2f2 -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+        border: 1px solid #AAAAAA;
+        border-radius: 2px;
+        color: #757575;
+        cursor: default;
+        font-family: arial,sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        margin-top:  15px;
+        margin-left: 40%;
+        padding: 0 16px;
+        text-align: center;
+
+    }
+    button[type="submit"] {
+        width: 150px;
+        height: 40px;
+        line-height: 27px;
+
+    }
+
+    button[type="submit"]:hover {
+        background: #9f82f2 -moz-linear-gradient(top, #cea4f5, #936ff1);
+        border: 1px solid darkmagenta;
+        border-radius: 2px;
+        color: white;
+
+    }
+
+    #infoSubmited {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+    a {
+        color: #00B7FF;
+    }
+    #header {
+        height: 15%;
+        color: darkmagenta;
+    }
+
+    body {
+        background: #F8F8F8;
+    }
+
+    #footer {
+        padding: 5px;
+    }
+
+    #image {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+    }
+
+    #mainInfo {
+        display: flex;
+        align-self: center;
+        width: 100%;
+        height: auto;
+    }
+
+    #photos {
+        display: -webkit-flex;
+        align-self: center;
+        display: table-row;
+        width: 99%;
+        height: auto;
+    }
+
+    .photo {
+        width: 97%;
+        height: auto;
+        margin: 3px;
+    }
+
+    #mainImage {
+        width: 97%;
+        height: 100%;
+    }
+    #mainContent {
+        margin: 5px;
+        display: -webkit-flex;
+        display: table-row;
+        flex-direction: row;
+
+    }
+
+    #mainInfo {
+        margin: 5px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #headerContent {
+        margin: 1% 1% 1% 10%;
+        padding: 5px;
+
+    }
+
+    #shortInfo {
+        width: 98%;
+        height: auto;
+    }
+
+    #main {
+        margin: auto;
+        height: 900px;
+        display: flex;
+        width: 98%;
+        border-radius: 30px;
+    }
+
+    .headerFinal {
+        width: 98%;
+        height: 10%;
+        margin: auto;
+        color: darkmagenta;
+        border-radius: 20px;
+    }
+
+    @keyframes loading {
+        0%{
+            border-radius: 10% 10% 10% 10%;
+            transform: rotate(0deg);
+        }
+
+        25%{
+            border-radius: 50% 10% 10% 10%;
+            transform: rotate(90deg);
+        }
+        50%{
+            border-radius: 50% 10% 50% 10%;
+            transform: rotate(180deg);
+        }
+        75%{
+            border-radius: 50% 50% 50% 10%;
+            transform: rotate(270deg);
+        }
+        100%{
+            border-radius: 50% 50% 50% 50%;
+            transform: rotate(360deg);
+        }
+    }
+
+    #loading {
+        margin: 24% auto;
+        width: 80px;
+        height: 80px;
+        background: darkmagenta;
+        animation: loading 3s ease-out 0s infinite;
+    }
+
+    #globalInput {
+        width: 95%;
+        height: 700px;
+    }
+
+    .inputs {
+        display: -webkit-flex;
+        display: flex;
+        width: 95%;
+        height: 40px;
+        padding: 3px;
+        margin: 15px;
+    }
+
+    .captions {
+        display: -webkit-flex;
+        display: flex;
+        width: 300px;
+        height: 40px;
+        margin: 5px;
+        padding: 3px;
+        color: #757575;
+    }
+
+    .label {
+        width: 300px;
+    }
+
+    input[type=text], input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        border-radius: 15px;
+    }
+    input[type=text]:focus, input[type=email]:focus {
+        border: 3px solid darkmagenta;
+    }
+
+    button[type="submit"] {
+
+        -moz-border-radius: 2px;
+        -moz-user-select: none;
+        background: #a77df1 -moz-linear-gradient(top, #936ff1, #a77df1);
+        border: 1px solid #AAAAAA;
+        border-radius: 2px;
+        color: #757575;
+        cursor: default;
+        font-family: arial,sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        margin-top:  15px;
+        margin-left: 40%;
+        padding: 0 16px;
+        text-align: center;
+
+    }
+    button[type="submit"] {
+        width: 150px;
+        height: 40px;
+        line-height: 27px;
+
+    }
+
+    button[type="submit"]:hover {
+        background: darkmagenta;
+        border: 1px solid darkmagenta;
+        border-radius: 2px;
+        color: white;
+
+    }
+
+    #infoSubmited {
+        width: 400px;
+        height: 400px;
+    }
+}

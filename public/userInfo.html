@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <!--<script src="../modules/userInfo.js"></script>-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LTD info</title>
+     <style>
+        #success {
+            width: 40%;
+            height: auto;
+            margin: auto;
+            color: darkmagenta;
+            font-size: large;
+            font-family: "Courier 10 Pitch", Saab, sans-serif;
+        }
+        body {
+            background: #FFFFFF;
+        }
+        @media (max-width: 700px){
+            #success {
+                width: 100%;
+                height: auto;
+                margin: auto;
+                color: darkmagenta;
+                font-family: "Courier 10 Pitch", Saab, sans-serif;
+            }
+            body {
+                background: #FFFFFF;
+
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<header><div class="headerFinal" style="margin: 7px auto;"><h2 id="headerContent">London theatre direct. Thank you for using our services !</h2></div></header>
+<div id="main">
+    <div id="globalInput">
+        <form id="form123">
+            <div class="inputs">
+                <div class="captions">First Name : <div style="color: darkmagenta">&nbsp;&nbsp;&nbsp;*</div></div>
+                <div class="label"><label><input type="text" class="inputField" id="Name" required></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">Last Name : <div style="color: darkmagenta">&nbsp;&nbsp;&nbsp;*</div></div>
+                <div class="label"><label><input type="text" class="inputField" id="lastName" required></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">Email : <div style="color: darkmagenta">&nbsp;&nbsp;&nbsp;*</div></div>
+                <div class="label"><label><input type="email" class="inputField" id="Email" required></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">Address line 1 : <div style="color: darkmagenta">&nbsp;&nbsp;&nbsp;*</div></div>
+                <div class="label"><label><input type="text" class="inputField" id="Address1"></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">Address line 2 :</div>
+                <div class="label"><label><input type="text" class="inputField" id="Address2"></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">Company Name :</div>
+                <div class="label"><label><input type="text" class="inputField" id="CompanyName"></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">City : <div style="color: darkmagenta">&nbsp;&nbsp;&nbsp;*</div></div>
+                <div class="label"><label><input type="text" class="inputField" id="city" required></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">Country : <div style="color: darkmagenta">&nbsp;&nbsp;&nbsp;*</div></div>
+                <div class="label"><label><input type="text" class="inputField" id="country" required></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">Zip : <div style="color: darkmagenta">&nbsp;&nbsp;&nbsp;*</div></div>
+                <div class="label"><label><input type="text" class="inputField" id="zip" required></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">Phone :</div>
+                <div class="label"><label><input type="text" class="inputField" id="phone"></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">Mobile :</div>
+                <div class="label"><label><input type="text" class="inputField" id="mobile"></label></div>
+            </div>
+            <div class="inputs">
+                <div class="captions">State Code :</div>
+                <div class="label"><label><input type="text" class="inputField" id="stateCode"></label></div>
+            </div>
+            <div id="submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script defer src="./webpack/form.entry.js"></script>
+</body>
+</html>
